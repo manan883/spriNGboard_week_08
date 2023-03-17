@@ -61,10 +61,9 @@ void Game::roll(int roll)
 
 	if (inPenaltyBox[currentPlayer])
 	{
+    isGettingOutOfPenaltyBox = !(roll%2);
 		if (roll % 2 != 0)
 		{
-			isGettingOutOfPenaltyBox = true;
-
 			cout << players[currentPlayer] << " is getting out of the penalty box" << endl;
 			places[currentPlayer] = places[currentPlayer] + roll;
 			if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
@@ -76,7 +75,6 @@ void Game::roll(int roll)
 		else
 		{
 			cout << players[currentPlayer] << " is not getting out of the penalty box" << endl;
-			isGettingOutOfPenaltyBox = false;
 		}
 
 	}
