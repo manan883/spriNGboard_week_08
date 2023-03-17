@@ -21,7 +21,7 @@ int main(int argc, char** argv)
 
 	do
 	{
-
+    //this does a rand int from 0-4 + 1 which is 0-5
 		aGame.roll(rand() % 5 + 1);
 
 		if (rand() % 9 == 7)
